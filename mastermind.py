@@ -30,6 +30,7 @@ def guess_code():
                 break
         else:
             break
+    
     return guess
 
 #3. Compare the guess
@@ -64,7 +65,6 @@ def game():
     code = generate_code()
     for attempts in range(1, TRIES+1):
         guess = guess_code()
-        print(guess)
         correct_pos, incorrect_pos = check_code(guess,code)
 
         if correct_pos == CODE_LENGTH:
